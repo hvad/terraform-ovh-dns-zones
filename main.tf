@@ -8,28 +8,34 @@ terraform {
 }
 
 provider "ovh" {
-  endpoint           = "ovh-eu"
-  application_key    = ""
-  application_secret = ""
-  consumer_key       = ""
+  endpoint           = var.ovh_endpoint
+  application_key    = var.ovh_application_key
+  application_secret = var.ovh_application_secret
+  consumer_key       = var.ovh_consumer_key
 }
 
 locals {
-  zone = "toulousejudo.com"
+  # Flatten the nested domain structure into a single map for the resource loop
+  # The key is constructed as "domain_subdomain_type" to ensure uniqueness
+  flattened_records = merge([
+    for domain, config in var.domains_config : {
+      for record in config.records : 
+        "${domain}_${record.sub == "" ? "@" : record.sub}_${record.type}" => {
+          zone      = domain
+          subdomain = record.sub
+          fieldtype = record.type
+          target    = record.target
+        }
+    }
+  ]...)
 }
 
-# 1. Record A (Racine)
-resource "ovh_domain_zone_record" "root_a" {
-  zone      = local.zone
-  subdomain = ""
-  fieldtype = "A"
-  target    = "51.83.68.73"
-}
+# Resource to create DNS records for all domains defined in tfvars
+resource "ovh_domain_zone_record" "multi_domain_records" {
+  for_each = local.flattened_records
 
-# 2. Record A (WWW)
-resource "ovh_domain_zone_record" "www_a" {
-  zone      = local.zone
-  subdomain = "www"
-  fieldtype = "A"
-  target    = "51.83.68.73"
+  zone      = each.value.zone
+  subdomain = each.value.subdomain
+  fieldtype = each.value.fieldtype
+  target    = each.value.target
 }

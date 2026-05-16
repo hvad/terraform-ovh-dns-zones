@@ -1,8 +1,5 @@
-# OVH API Credentials
+# OVH
 ovh_endpoint           = "ovh-eu"
-ovh_application_key    = "APP_KEY"
-ovh_application_secret = "APP_SECRET"
-ovh_consumer_key       = "CONSUMER_KEY"
 
 # DNS Zones and Records Configuration
 domains_config = {

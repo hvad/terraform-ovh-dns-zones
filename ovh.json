@@ -1,0 +1,17 @@
+{
+	"ovh_application_key": "ENC[AES256_GCM,data:Y+OXP+h38rl8cZWA6glhpQ==,iv:Yn/awAOkWktiLtxa9ceCesH6u9RlNcApubH3KFCBedc=,tag:gKFSixl/2SjmwE20wfm7MA==,type:str]",
+	"ovh_application_secret": "ENC[AES256_GCM,data:hl6AnYY1w4mapJS1uefGT2Bw122uTbO3NFeHvl1UhHQ=,iv:MDeuR9PVYk+192UG83ilD69FmNtzOiOi8z3qu7Ebm6Q=,tag:Nye76g8GzvezCzvicmq5dw==,type:str]",
+	"ovh_consumer_key": "ENC[AES256_GCM,data:pwMkBILWPCAg0sIEMDO4QMOAfPa2oB7KDko8ffrYwZ0=,iv:31RJpEJvSCSOEkBNGF8/FgZ23Cusf7VFF0Qng57kiMU=,tag:wczrvtMCFKJo1dqxTb4Y8A==,type:str]",
+	"sops": {
+		"age": [
+			{
+				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBFZHVUd2liaW5PbjJyYnJs\nTVE4aEgreE5MS3BDZGdJWFlUSmRKYm53L1FrCnFhZWxoOHEwWXhZTG9McS9oaEEr\ncEQ0YXQ0RkUvNGdPdWc5U0YvWG9UckUKLS0tIHA2dVVNWkRPdG9Sc2hvODdxUXdV\nNHZIMENqc3MzVlZkUitpeW9pWllEbDgKOGPuKA0pez+WVe2ccgGWw5zk8JrJw264\njBozDqqLXHcCZfhdh8mEMNgXhufu9OUzck0zZBZgoJPwp8fZVweUaA==\n-----END AGE ENCRYPTED FILE-----\n",
+				"recipient": "age1xhvs0vcvyhn4rc0uvv6xk549fe0trjal30mssxlk0wvjsd9dfffq6p4cyd"
+			}
+		],
+		"lastmodified": "2026-05-16T06:14:33Z",
+		"mac": "ENC[AES256_GCM,data:xhikgsuhcBO3fb/d1FDNEHIroTp9JxBoSydo+gYUjlQWUmnlsv30wK8ERVG3QzTcNqU8+VI2/uivg645xdz+mH6mpkJPn1l5Kza7YQ3yWTVVbwEJmceLKkqSM3k98cv6ckF2553lZVjB0THBn1zWHfqmGolaisSldhpDbJAVzoc=,iv:taPljiSYtz7qtsRFxFKikCy68z52t5zS+eRzEghZCiw=,tag:SyYTGKWS/jqpYPDuTznMMw==,type:str]",
+		"unencrypted_suffix": "_unencrypted",
+		"version": "3.13.0"
+	}
+}

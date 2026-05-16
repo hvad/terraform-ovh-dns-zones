@@ -64,7 +64,7 @@ When you save and close the file, SOPS will automatically encrypt the values.
 
 ### 3. DNS Zones Configuration (`.tfvars`)
 
-Define your non-sensitive infrastructure configuration and record mappings in a variable file, such as `toulousejudo.tfvars`:
+Define your non-sensitive infrastructure configuration and record mappings in a variable file, such as `domain.tfvars`:
 
 ```hcl
 # OVH API Settings
@@ -114,8 +114,8 @@ terraform init
 Run a plan to preview the changes, then apply them to configure your DNS records:
 
 ```bash
-terraform plan -var-file="toulousejudo.tfvars"
-terraform apply -var-file="toulousejudo.tfvars"
+terraform plan -var-file="domain.tfvars"
+terraform apply -var-file="domain.tfvars"
 
 ```
 
